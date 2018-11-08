@@ -3,6 +3,11 @@
 """
 1 GPU: 100-120 steps/sec
 {'global_step': 48000, 'accuracy': 0.991, 'loss': 0.04863262}
+
+WARNING:tensorflow:From mnist.py:96: TowerOptimizer.__init__ (from tensorflow.contrib.estimator.python.estimator.replicate_model_fn) is deprecated and will be removed after 2018-05-31.
+Instructions for updating:
+Please use `tf.contrib.distribute.MirroredStrategy` instead.
+
 """
 
 from __future__ import absolute_import
