@@ -16,7 +16,7 @@ import sys
 import tensorflow as tf
 import dataset
 
-from utils import timer
+from utils.timer import timer
 
 
 class Model(object):
