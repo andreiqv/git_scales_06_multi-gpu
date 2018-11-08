@@ -8,6 +8,10 @@ WARNING:tensorflow:From mnist.py:96: TowerOptimizer.__init__ (from tensorflow.co
 Instructions for updating:
 Please use `tf.contrib.distribute.MirroredStrategy` instead.
 
+ValueError: Variable conv2d_2/kernel does not exist, or was not created 
+  with tf.get_variable(). Did you mean to set reuse=tf.AUTO_REUSE in VarScope?
+
+
 """
 
 from __future__ import absolute_import
