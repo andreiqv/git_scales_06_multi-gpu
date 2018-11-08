@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+1 GPU: 100-120 steps/sec
+{'global_step': 48000, 'accuracy': 0.991, 'loss': 0.04863262}
+
+"""
+
 #  Copyright 2017 The TensorFlow Authors. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +21,9 @@
 #  limitations under the License.
 """Convolutional Neural Network Estimator for MNIST, built with tf.layers."""
 
+
+
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -23,6 +34,8 @@ import sys
 
 import tensorflow as tf
 import dataset
+
+from utils import timer
 
 
 class Model(object):
@@ -258,4 +271,7 @@ if __name__ == '__main__':
   parser = MNISTArgParser()
   tf.logging.set_verbosity(tf.logging.INFO)
   FLAGS, unparsed = parser.parse_known_args()
+
+  timer('TRAIN')
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  timer()
