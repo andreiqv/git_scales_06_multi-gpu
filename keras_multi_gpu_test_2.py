@@ -24,8 +24,8 @@ if __name__ == '__main__':
 
     # Replicates the model on 8 GPUs.
     # This assumes that your machine has 8 available GPUs.
-    parallel_model = multi_gpu_model(model, gpus=1)
-    #parallel_model = model
+    #parallel_model = multi_gpu_model(model, gpus=1)
+    parallel_model = model
     parallel_model.compile(loss='categorical_crossentropy',
                            optimizer='rmsprop')
 
