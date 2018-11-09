@@ -23,7 +23,8 @@ if __name__ == '__main__':
 
     # Replicates the model on 8 GPUs.
     # This assumes that your machine has 8 available GPUs.
-    parallel_model = multi_gpu_model(model, gpus=2)
+    #parallel_model = multi_gpu_model(model, gpus=2)
+    parallel_model = model
     parallel_model.compile(loss='categorical_crossentropy',
                            optimizer='rmsprop')
 
@@ -37,3 +38,15 @@ if __name__ == '__main__':
 
     # Save model via the template model (which shares the same weights):
     model.save('my_model.h5')
+
+  """
+if more memory were available.
+1000/1000 [==============================] - 46s 46ms/step - loss: 3458.7553
+Epoch 2/20
+1000/1000 [==============================] - 26s 26ms/step - loss: 3455.6544
+Epoch 3/20
+1000/1000 [==============================] - 27s 27ms/step - loss: 3455.6279
+Epoch 4/20
+1000/1000 [==============================] - 27s 27ms/step - loss: 3455.8632
+
+  """
