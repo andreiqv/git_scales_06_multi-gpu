@@ -3,6 +3,7 @@ if __name__ == '__main__':
 
     import tensorflow as tf
     from keras.applications import Xception
+    from keras.applications import inception_v3    
     from keras.utils import multi_gpu_model
     import numpy as np
 
@@ -17,7 +18,7 @@ if __name__ == '__main__':
     # Otherwise they may end up hosted on a GPU, which would
     # complicate weight sharing.
     with tf.device('/cpu:0'):
-        model = Xception(weights=None,
+        model = inception_v3(weights=None,
                          input_shape=(height, width, 3),
                          classes=num_classes)
 
