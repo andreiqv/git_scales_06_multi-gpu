@@ -1,6 +1,6 @@
 
 if __name__ == '__main__':
-  
+
     import tensorflow as tf
     from keras.applications import Xception
     from keras.utils import multi_gpu_model
@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     # Replicates the model on 8 GPUs.
     # This assumes that your machine has 8 available GPUs.
-    parallel_model = multi_gpu_model(model, gpus=8)
+    parallel_model = multi_gpu_model(model, gpus=2)
     parallel_model.compile(loss='categorical_crossentropy',
                            optimizer='rmsprop')
 
