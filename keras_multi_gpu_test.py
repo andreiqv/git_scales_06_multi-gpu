@@ -7,9 +7,9 @@ height = 224
 width = 224
 num_classes = 1000
 with tf.device('/cpu:0'):
-model = ResNet50(weights=None,
-    input_shape=(3, height, width),
-    classes=num_classes)
+    model = ResNet50(weights=None,
+      input_shape=(3, height, width),
+      classes=num_classes)
 parallel_model = multi_gpu_model(model)
 parallel_model.compile(loss='categorical_crossentropy',
     optimizer='rmsprop')
