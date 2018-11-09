@@ -5,8 +5,7 @@
 {'global_step': 48000, 'accuracy': 0.991, 'loss': 0.04863262}
 
 WARNING:tensorflow:From mnist.py:96: TowerOptimizer.__init__ (from tensorflow.contrib.estimator.python.estimator.replicate_model_fn) is deprecated and will be removed after 2018-05-31.
-Instructions for updating:
-Please use `tf.contrib.distribute.MirroredStrategy` instead.
+Instructions for updating: Please use `tf.contrib.distribute.MirroredStrategy` instead.
 
 ValueError: Variable conv2d_2/kernel does not exist, or was not created 
   with tf.get_variable(). Did you mean to set reuse=tf.AUTO_REUSE in VarScope?
